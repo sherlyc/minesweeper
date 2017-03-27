@@ -5,11 +5,23 @@
     <link rel="stylesheet" href="minesweeper.css">
     <script src="lib/tests.js"></script>
     <script src="lib/lib.js"></script>
-    <script src="minesweeper.js"></script>
+    <script src="minesweeper2.js"></script>
   </head>
   <body>
+    <audio>
+        <source src="audio/applause.ogg"></source>
+        Your browser isn't invited for super fun audio time.
+    </audio>
+    <audio>
+        <source src="audio/explosion.wav"></source>
+    </audio>
     <div id="message"></div>
     <div id="notes"></div>
-    <div class="board"></div>
+    <div id="board" class="board"></div>
+    <div class="resetButton">
+        <button type="button" onclick="resetGame()">Reset</button>
+
+
+    </div>
   </body>
 </html>
