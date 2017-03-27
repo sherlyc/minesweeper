@@ -105,6 +105,8 @@ function checkForWin () {
       if (playBomb) {
           lib.displayMessage('HAHA! KABOOM!');
           playAudio("boom");
+      } else {
+          playAudio("beep");
       }
   }
 
@@ -140,6 +142,9 @@ function playAudio (audioType) {
     }
     if (audioType=="boom") {
         var audio = document.getElementsByTagName("audio")[1];
+    }
+    if (audioType=="beep") {
+        var audio = document.getElementsByTagName("audio")[2];
     }
 
     audio.play();
