@@ -4,7 +4,7 @@ userCells=0;
 
 function initGlobalVariables() {
         board = {cells: []};
-        if (userCells!=0) { //check if user selected cells number if not use default value = 25;
+        if (userCells!=0) { //check if user selected difficulty mode, if not use default value = 25;
             cellsCount = userCells;
         } else {
             cellsCount = 25;
