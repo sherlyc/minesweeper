@@ -83,7 +83,7 @@ function resetGame () { //this function is triggered when user click on reset bu
     startGame();
 }
 
-function bombCount () {
+function bombCount () { //display the total number of mines
     document.getElementById("panel").innerHTML = "Total mines: " +mineCount;
 }
 
