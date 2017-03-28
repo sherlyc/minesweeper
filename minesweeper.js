@@ -78,7 +78,7 @@ function setCells (cellsNum) { //this function is called when user clicked on di
     resetGame();
 }
 
-function resetGame () { //this function is triggered when user click on reset button
+function resetGame () { //this function is triggered when user clicked on New Game button
     resetBoard();
     startGame();
 }
