@@ -7,7 +7,7 @@ function initGlobalVariables() {
         if (userCells!=0) { //check if user selected cells number if not use default value = 36;
             cellsCount = userCells;
         } else {
-            cellsCount = 36;
+            cellsCount = 25;
         }
 
         sqRoot = Math.sqrt(cellsCount); //get the square root of cells Count  sqRoot of 9 cells will return 3
