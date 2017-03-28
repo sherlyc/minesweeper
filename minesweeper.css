@@ -4,6 +4,7 @@ html, body {
 }
 
 body {
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: flex-center;
@@ -11,6 +12,7 @@ body {
 }
 
 #message, #notes {
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,11 +20,23 @@ body {
 
 #message {
   font-size: 1.5rem;
+
+}
+
+.selected {
+  color: white;
+  background: steelblue;
 }
 
 .board {
   display: flex;
   flex-wrap: wrap;
+}
+
+#panel {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .board div {
@@ -43,12 +57,22 @@ body {
   background-color: white;
 }
 
+.resetButton {
+    background-color: #f44336; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
 div.mine, div.mine:hover {
   background: no-repeat center/60% url("images/bomb.svg") crimson;
 }
 
 div.hidden {
-  background: #eee;
+  background: gray;
 }
 
 div.hidden:hover {
