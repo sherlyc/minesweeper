@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="minesweeper.css">
     <script src="lib/tests.js"></script>
     <script src="lib/lib.js"></script>
-    <script src="minesweeper2.js"></script>
+    <script src="minesweeper.js"></script>
   </head>
   <body>
     <audio>
@@ -19,11 +19,15 @@
     </audio>
     <div id="message"></div>
     <div id="notes"></div>
+    <div id="stripe">
+        <button type="button" class="resetButton" onclick="setCells(9)">Easy</button>
+        <button type="button" class="resetButton" onclick="setCells(25)">Medium</button>
+        <button type="button" class="resetButton" onclick="setCells(36)">Hard</button>
+    </div>
+    <div id="panel"></div>
     <div id="board" class="board"></div>
     <div class="resetButton">
-        <button type="button" onclick="resetGame()">Reset</button>
-
-
+        <button type="button" class="resetButton" onclick="resetGame()">Reset</button>
     </div>
   </body>
 </html>
