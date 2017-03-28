@@ -15,7 +15,7 @@ function initGlobalVariables() {
 }
 
 
-function setMine (mineCount, cellsCount) {
+function setMine (mineCount, cellsCount) { //this function will plant bomb based on the mineCount returned from initGlobalVariables function.
     var minePlanted = 0
     while (minePlanted < mineCount){
 
@@ -31,8 +31,7 @@ function setMine (mineCount, cellsCount) {
 
 }
 
-function createBoard () {
-    //create a dynamic board
+function createBoard () { //create a dynamic board
 
     for (var i=0; i< sqRoot ; i++){
 
@@ -45,10 +44,10 @@ function createBoard () {
                  hidden: 1,
                isMarked: 0,
             })
-         //}
+
         }
     }
-    setMine(mineCount,cellsCount);
+    setMine(mineCount,cellsCount); //call setMine function to plant bombs
     return board;
 
 }
@@ -74,7 +73,7 @@ function resetBoard (){ //my custom function to clear the board html on the scre
     document.getElementsByClassName('board')[0].innerHTML="";
 }
 
-function setCells (cellsNum) {
+function setCells (cellsNum) { //this function is called when user clicked on difficulty buttons
     userCells = cellsNum;
     resetGame();
 }
@@ -116,14 +115,14 @@ function checkForWin () {
   }
 
   if (youWin) {
-      lib.displayMessage('You win!');
-      playAudio("victory");
+      lib.displayMessage('You win!'); //display winning message
+      playAudio("victory"); //play the applause sound.
   } else {
       if (playBomb) {
-          lib.displayMessage('HAHA! KABOOM!');
-          playAudio("boom");
+          lib.displayMessage('HAHA! KABOOM!'); //display game over message.
+          playAudio("boom"); //play the explosion sound
       } else {
-          playAudio("beep");
+          playAudio("beep"); //play the toggle sound.
       }
   }
 
@@ -142,7 +141,7 @@ function countSurroundingMines (cell) { //count the number of mines around the c
 }
 
 
-function playAudio (audioType) {
+function playAudio (audioType) {  //this function will play audio file
     if (audioType=="victory") {
         var audio = document.getElementsByTagName("audio")[0];
     }
