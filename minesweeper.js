@@ -11,7 +11,7 @@ function initGlobalVariables() {
         }
 
         sqRoot = Math.sqrt(cellsCount); //get the square root of cells Count  sqRoot of 9 cells will return 3
-        mineCount = Math.floor(cellsCount * 0.25); //get the number of mine with the ratio of 0.15 per cell.
+        mineCount = Math.floor(cellsCount * 0.15); //get the number of mine with the ratio of 0.15 per cell.
 }
 
 
