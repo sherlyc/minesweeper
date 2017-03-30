@@ -56,7 +56,7 @@ function createBoard () { //create a dynamic board
 function startGame () {
   // Don't remove this function call: it makes the game work!
     initGlobalVariables();
-    console.log(cellsCount);
+    //console.log(cellsCount);
     createBoard();
     lib.initBoard();
     for (i=0; i< cellsCount; i++){
@@ -64,8 +64,8 @@ function startGame () {
         board.cells[i].surroundingMines = countSurroundingMines(board.cells[i]);
 
     }
-    document.addEventListener('click', checkForWin);
-    document.addEventListener('contextmenu', checkForWin);
+    document.getElementsByClassName('board')[0].addEventListener('click', checkForWin);
+    document.getElementsByClassName('board')[0].addEventListener('contextmenu', checkForWin);
 
 }
 
@@ -84,7 +84,8 @@ function resetGame () { //this function is triggered when user clicked on New Ga
 }
 
 function bombCount () { //display the total number of mines
-    document.getElementById("panel").innerHTML = "Total mines: " +mineCount;
+    var panel = document.getElementById("panel");
+    panel.innerHTML = "Total mines: " +mineCount;
 }
 
 function checkForWin () {
